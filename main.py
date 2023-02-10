@@ -1,0 +1,5 @@
+print('operadores aritmeticos')
+print(56 + 3)
+print(56 - 3)
+print(56 * 3)
+print(56 / 3)

@@ -10,3 +10,4 @@ if(idade >= 18):
 else:
     tempo = 18 - idade
     print(f'NAO pode vender bebida e deve esperar {tempo} ano(s)')
+

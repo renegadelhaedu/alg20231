@@ -8,3 +8,4 @@ if(media >= 7):
     print('PASSOUUUUUU')
 else:
     print('Perdeu o sao joao')
+

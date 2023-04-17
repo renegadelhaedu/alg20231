@@ -8,9 +8,14 @@ e depois exiba todos os numeros na ordam contraria
 
 
 
-nums = [2, 5, 7 ,8]
+nums = [9, 5, 1 ,8]
 
-nums.insert(1, 99)
+for i in range(len(nums)):
+    for j in range(len(nums)-1):
+        if(nums[i] < nums[j]):
+            aux = nums[i]
+            nums[i] = nums[j]
+            nums[j] = aux
 
 print(nums)
 

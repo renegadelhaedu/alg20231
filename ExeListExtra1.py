@@ -13,6 +13,7 @@ while(op != 0):
     print('2-buscar')
     print('3-listar')
     print('4-Remover')
+    print('5-Remover todos os nomes buscados')
     print('0-sair')
     op = int(input('digite a opcao desejada'))
 
@@ -62,3 +63,21 @@ while(op != 0):
 
         if (not achei):
             print('nao foi encontrado ninguem com esse nome')
+
+    elif(op == 5):
+        buscado = input('digite o nome da pessoa que voce quer remover')
+        deletados = []
+        for list_indv in funcs:
+            if (list_indv[0].find(buscado) >= 0):
+                deletados.append(list_indv)
+
+        for removido in deletados:
+            funcs.remove(removido)
+        print('funcionarios removidos com sucesso')
+
+    elif(op == 6):
+        '''
+        desenvolva a funcionalidade atualizar o funcionario.
+        o usuario deve inserir o nome do funcionario para busca 
+        e depois escolhe o indice que será atualizado na lista 
+        '''

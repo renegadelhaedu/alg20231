@@ -1,7 +1,8 @@
-funcs = [['samuel dantas', 20, 9999], ['pedro',21, 11111],['carla',34, 88]]
+nomes = ['ewerthon', 'fernando1', 'fernando2']
+nomes.pop(0)
+print(nomes[1])
+#for i in range(len(nomes)):
+#    print(nomes[i])
 
-buscado = input('digite o nome de quem voce procura')
-achei = False
-for list_indv in funcs:
-    if (list_indv[0].find(buscado) >= 0):
-        print(list_indv[0])
+#for i in nomes:
+#    print(i)

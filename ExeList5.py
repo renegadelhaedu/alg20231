@@ -4,6 +4,8 @@ par = list()
 impar = list()
 
 for i in range(20):
+    #valor = int(input('digite  um numero inteiro'))
+    #lista.append(valor)
     lista.append(random.randint(1,99))
 
 for x in lista:
@@ -12,5 +14,6 @@ for x in lista:
     else:
         impar.append(x)
 
+print(lista)
 print(par)
 print(impar)

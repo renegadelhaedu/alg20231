@@ -79,5 +79,7 @@ while(op != 0):
         '''
         desenvolva a funcionalidade atualizar o funcionario.
         o usuario deve inserir o nome do funcionario para busca 
-        e depois escolhe o indice que será atualizado na lista 
+        e depois escolhe o indice que será atualizado na lista.
+        posteriomente, as novas informações do usuário são lidas novamente
+         e devem sobrescrever os dados antigos
         '''

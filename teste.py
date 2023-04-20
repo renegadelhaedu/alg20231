@@ -1,4 +1,14 @@
-nomes = ['ewerthon', 'fernando1', 'fernando2']
+texto = 'eu estou com vontade de comer'
+criptografado = []
+for i in texto:
+    new = ord(i) + 4
+    criptografado.append(chr(new) )
 
-for ind in range(len(nomes)):
-    print(nomes[ind])
+print(*criptografado)
+
+descripto = []
+for i in criptografado:
+    new = ord(i) - 4
+    descripto.append(chr(new) )
+
+print(*descripto)

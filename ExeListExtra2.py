@@ -4,8 +4,8 @@ Cada funcionário será uma lista.
 A quantidade de funcionários é incerta.
 Use um menu dentro de um while com duas funcionalidades: cadastrar e buscar
 '''
-pessoas = [['fernando', 19, 9999], ['roselanio', 23, 11111],
-           ['maria das gracas',22,7777], ['mariana',18,7777]]
+pessoas = [['felipe', 19, 9999], ['pedro', 23, 11111],
+           ['caiqui',22,7777], ['peterson',18,7777]]
 
 op = 99
 while(op != 0):
@@ -16,6 +16,7 @@ while(op != 0):
     print('4-Calcular media de idades')
     print('5-Remover pessoa')
     print('6-Atualizar pessoa')
+    print('7-Aumentar salario das pessoas > 50 anos')
     print('0-sair')
 
     op = int(input('digite a opcao desejada'))
@@ -86,4 +87,11 @@ while(op != 0):
 
     elif (op == 7):
         #aumentar o salario em 15% das pessoas que tem idade maior que 50 anos
-        print('fazer em casa')
+        for ind in range(len(pessoas)):
+            idade = pessoas[ind][1]
+
+            if(idade > 50):
+                novo_sal = pessoas[ind][2] * 1.15
+                pessoas[ind][2] = novo_sal
+                print('Salario Atualizado')
+                print(f'{pessoas[ind][0]}: {novo_sal}')

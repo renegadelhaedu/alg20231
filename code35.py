@@ -2,7 +2,6 @@
 #imutável
 
 
-alunos = ('fundamental', 'medio', 'superior', 'pos')
+alunos = ('fundamental', 'medio', 'superior', 'pos','pos')
 
-print(alunos[2])
-
+print(alunos.count('pos'))

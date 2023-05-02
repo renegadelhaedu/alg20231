@@ -88,10 +88,7 @@ while(op != 0):
     elif (op == 7):
         #aumentar o salario em 15% das pessoas que tem idade maior que 50 anos
         for ind in range(len(pessoas)):
-            idade = pessoas[ind][1]
-
-            if(idade > 50):
-                novo_sal = pessoas[ind][2] * 1.15
-                pessoas[ind][2] = novo_sal
+            if(pessoas[ind][1] > 50):
+                pessoas[ind][2] = pessoas[ind][2] * 1.15
                 print('Salario Atualizado')
-                print(f'{pessoas[ind][0]}: {novo_sal}')
+                print(f'{pessoas[ind][0]}: {pessoas[ind][2]}')

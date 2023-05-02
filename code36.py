@@ -2,11 +2,13 @@
 #estrutura de dados = chave - valor
 
 #pessoas = dict()
+#pessoas = {}
+pessoas = {'jose':56, 'maria':68, 'carlos':31}
 
-pessoas = {'rene':['professor', 34, 'Sousa-pb'], 'carlos':'padre', 'maria':'freira'}
+soma = 0
+for x in pessoas:
+    soma += pessoas[x]
+    print(pessoas[x])
 
-nome = pessoas['rene']
-print(nome)
-
-#for x in pessoas:
-#    print(f'{x} é {pessoas[x]}')
+media = soma / len(pessoas)
+print(f'a media das idades e {media}')

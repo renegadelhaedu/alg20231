@@ -12,12 +12,21 @@ while(op != 0):
     op = int(input('digite a opcao desejada '))
 
     if(op == 1):
-        nome = input('digite seu nome ')
-        cpf = input('digite seu CPF ')
-        idade = int(input('digite sua idade '))
-        nota = float(input('digite sua nota media '))
-        #antes de add uma pessoa, verifique se o cpf já está cadastrado
-        pessoas[cpf] = [nome, idade, nota]
+
+        cpf_novo = input('digite seu CPF ')
+        existe = False
+
+        for cpf in pessoas:
+            if(cpf_novo == cpf):
+                existe = True
+
+        if(existe == True):
+            print('Este CPF ja esta cadastrado')
+        else:
+            nome = input('digite seu nome ')
+            idade = int(input('digite sua idade '))
+            nota = float(input('digite sua nota media '))
+            pessoas[cpf_novo] = [nome, idade, nota]
 
     elif(op == 2):
         print(f'\n\nNome - idade - nota')
@@ -36,5 +45,14 @@ while(op != 0):
         print(f'a media de idades foi {media} anos')
 
     elif(op == 4):
-        cpf = input('digite o cpf para realizar a busca ')
-        #terminar a busca
+        cpf_busca = input('digite o cpf para realizar a busca ')
+        entrou = False
+
+        for cpf in pessoas:
+            if(cpf_busca == cpf):
+                print(f'{pessoas[cpf][0]} - {pessoas[cpf][1]} - {pessoas[cpf][2]} ')
+
+                entrou = True
+
+        if(entrou == False):
+            print('CPF NÃO ENCONTRADO!')
